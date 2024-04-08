@@ -368,21 +368,23 @@ int main()
 			}
 
 			ImGui::Begin("Settings");
-			ImGui::Text("Point light:");
+			ImGui::TextColored(ImVec4(1.0, 0.6, 0.20, 1.0), "Point light:");
 			// Point light:			
 			ImGui::Checkbox("Show source", &pointLightSource);
 			ImGui::ColorEdit3("Color", &pointLightColor[0]);
 			ImGui::Text("(Setting the color to black disables the point light)");
 			ImGui::DragFloat("Distance", &radius, 0.05f, 2.0f, 10.0f);
 			// Directional light:
-			ImGui::Text("Directional light:");
+			ImGui::Separator();
+			ImGui::TextColored(ImVec4(1.0, 0.6, 0.20, 1.0), "Directional light:");
 			ImGui::DragFloat3("Direction", &sunDirection[0], 0.01f, -1.0f, 1.0f);
 			ImGui::ColorEdit3("Light Color", &sunColor[0]); // Consider usign this color for light calculations
 			ImGui::Text("(Setting the color to black disables the directional light)");
 			ImGui::ColorEdit3("Ambient color", &ambientColor[0]); // Consider usign this color for light calculations
 			ImGui::DragFloat("Ambient strength", &ambientIntensity, 0.01f, 0.0f, 2.0);
 			// Material
-			ImGui::Text("Cube:");
+			ImGui::Separator();
+			ImGui::TextColored(ImVec4(1.0, 0.6, 0.20, 1.0), "Cube:");
 			ImGui::Checkbox("Textured cube", &texturedCube);
 			if (!texturedCube)
 			{

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-#Used to get root dir if CMakeList is inside the src folder:
+#Used to get root dir if CMakeLists is inside the src folder:
 #cmake_path(GET CMAKE_CURRENT_SOURCE_DIR PARENT_PATH PROJECT_PARENT_DIR)
 #message(STATUS "Root directory: ${PROJECT_PARENT_DIR}")
 
@@ -37,9 +37,9 @@ configure_file("assets/shaders/CubeLightVert.txt" "shaders/CubeLightVert.txt")
 configure_file("assets/shaders/FragShader.txt" "shaders/FragShader.txt")
 configure_file("assets/shaders/VertShader.txt" "shaders/VertShader.txt")
 #Textures
-configure_file("assets/textures/container.png" "textures/container.png")
-configure_file("assets/textures/container_specular.png" "textures/container_specular.png")
-configure_file("assets/textures/smudges.jpg" "textures/smudges.jpg")
+configure_file("assets/textures/container.png" "textures/container.png" COPYONLY)
+configure_file("assets/textures/container_specular.png" "textures/container_specular.png" COPYONLY)
+configure_file("assets/textures/smudges.jpg" "textures/smudges.jpg" COPYONLY)
 
 target_include_directories(OpenGLLighting PUBLIC
     "include"
