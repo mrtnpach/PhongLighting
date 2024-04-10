@@ -32,10 +32,10 @@ add_executable(OpenGLLighting
 )
 
 #Shaders
-configure_file("assets/shaders/CubeLightFrag.txt" "shaders/CubeLightFrag.txt")
-configure_file("assets/shaders/CubeLightVert.txt" "shaders/CubeLightVert.txt")
-configure_file("assets/shaders/FragShader.txt" "shaders/FragShader.txt")
-configure_file("assets/shaders/VertShader.txt" "shaders/VertShader.txt")
+configure_file("assets/shaders/CubeLightFrag.frag" "shaders/CubeLightFrag.frag")
+configure_file("assets/shaders/CubeLightVert.vert" "shaders/CubeLightVert.vert")
+configure_file("assets/shaders/FragShader.frag" "shaders/FragShader.frag")
+configure_file("assets/shaders/VertShader.vert" "shaders/VertShader.vert")
 #Textures
 configure_file("assets/textures/container.png" "textures/container.png" COPYONLY)
 configure_file("assets/textures/container_specular.png" "textures/container_specular.png" COPYONLY)
