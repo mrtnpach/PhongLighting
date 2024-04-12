@@ -171,7 +171,7 @@ int main()
 		unsigned int smudgesSpecular;
 		load2DTexture(smudgesSpecular, "textures/smudges.jpg", false, loadingSuccessful);
 
-		Shader cubeShader = Shader("shaders/VertShader.txt", "shaders/FragShader.txt");
+		Shader cubeShader = Shader("shaders/VertShader.vert", "shaders/FragShader.frag");
 		cubeShader.Use();
 		glActiveTexture(GL_TEXTURE0); // Activates texture unit. Texture units allow to use multiple textures in a shader
 		glBindTexture(GL_TEXTURE_2D, containerDiffuse); // Subsequent texture binding binds the texture to the unitglActiveTexture(GL_TEXTURE0); 
@@ -242,7 +242,7 @@ int main()
 		glBindVertexArray(0);
 		lightVBO->Unbind();
 
-		Shader lightShader = Shader("shaders/CubeLightVert.txt", "shaders/CubeLightFrag.txt");
+		Shader lightShader = Shader("shaders/CubeLightVert.vert", "shaders/CubeLightFrag.frag");
 
 		/***************************************************************************************************/
 

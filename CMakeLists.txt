@@ -8,11 +8,11 @@ find_package(OpenGL REQUIRED)
 
 include_directories(${OPENGL_INCLUDE_DIRS})
 
-project(OpenGLLighting VERSION 1.0)
+project(PhongModel VERSION 1.0)
 
 add_subdirectory(glfw)
 
-add_executable(OpenGLLighting
+add_executable(PhongModel 
     src/Main.cpp
     src/Camera.cpp
     src/ElementBuffer.cpp
@@ -23,7 +23,6 @@ add_executable(OpenGLLighting
     src/STBLoading.cpp
     src/VertexBuffer.cpp
     src/imgui/imgui.cpp
-    src/imgui/imgui_demo.cpp 
     src/imgui/imgui_draw.cpp 
     src/imgui/imgui_impl_glfw.cpp 
     src/imgui/imgui_impl_opengl3.cpp 
@@ -32,19 +31,19 @@ add_executable(OpenGLLighting
 )
 
 #Shaders
-configure_file("assets/shaders/CubeLightFrag.frag" "shaders/CubeLightFrag.frag")
-configure_file("assets/shaders/CubeLightVert.vert" "shaders/CubeLightVert.vert")
-configure_file("assets/shaders/FragShader.frag" "shaders/FragShader.frag")
-configure_file("assets/shaders/VertShader.vert" "shaders/VertShader.vert")
+configure_file("assets/shaders/CubeLightFrag.frag" "shaders/CubeLightFrag.frag" COPYONLY)
+configure_file("assets/shaders/CubeLightVert.vert" "shaders/CubeLightVert.vert"  COPYONLY)
+configure_file("assets/shaders/FragShader.frag" "shaders/FragShader.frag" COPYONLY)
+configure_file("assets/shaders/VertShader.vert" "shaders/VertShader.vert" COPYONLY)
 #Textures
 configure_file("assets/textures/container.png" "textures/container.png" COPYONLY)
 configure_file("assets/textures/container_specular.png" "textures/container_specular.png" COPYONLY)
 configure_file("assets/textures/smudges.jpg" "textures/smudges.jpg" COPYONLY)
 
-target_include_directories(OpenGLLighting PUBLIC
+target_include_directories(PhongModel PUBLIC
     "include"
     "src/imgui"
 )
 
-target_link_libraries(OpenGLLighting OpenGL::GL)
-target_link_libraries(OpenGLLighting ${OPENGL_LIBRARIES} glfw)
+target_link_libraries(PhongModel OpenGL::GL)
+target_link_libraries(PhongModel ${OPENGL_LIBRARIES} glfw)
