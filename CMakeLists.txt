@@ -4,11 +4,11 @@ cmake_minimum_required(VERSION 3.15)
 #cmake_path(GET CMAKE_CURRENT_SOURCE_DIR PARENT_PATH PROJECT_PARENT_DIR)
 #message(STATUS "Root directory: ${PROJECT_PARENT_DIR}")
 
+project(PhongModel VERSION 1.0)
+
 find_package(OpenGL REQUIRED)
 
 include_directories(${OPENGL_INCLUDE_DIRS})
-
-project(PhongModel VERSION 1.0)
 
 add_subdirectory(glfw)
 
