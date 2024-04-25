@@ -21,13 +21,13 @@ Three different light casters were implemented:
 * Directional light
 * Spotlight
 
-Textures and shaders can be found inside the `assets` folder. It is possible to replace the cube's textures as long as the original filenames are kept (extensions included). Model importing is planned for a future version so as to finally get rid of that boring cube.
+Textures and shaders can be found inside the `assets` folder. It is possible to replace the cube's textures as long as the original filenames are kept (extensions included). Model importing is planned for a future version so as to finally get rid of that boring cube :)
 
 At over 500 lines inside Main.cpp, it is clear that the project needs some serious redesign and restructuring. I plan to learn about game engine architectures and how to better abstract things such as vertex array objects, element buffers objects, renderers, input processing and so on.
 
 ## Keybindings and controls
 
->Use the mouse and keyboard to look and move around the scene. 
+>Use your mouse and keyboard to look and move around the scene. 
 
 | Key | Action |
 |---|---|
@@ -41,13 +41,13 @@ At over 500 lines inside Main.cpp, it is clear that the project needs some serio
 |`F`| Toggle flashlight*|
 |`Left shift`| Toggle edit mode|
 
-*Toggling the flashlight on **disables the point and directional light** (makes it look nicer, I guess)
+*Toggling the flashlight on **disables the point and directional light** (looks nicer, I guess)
 
 ## Building the project using CMake
 
-CMake 3.15 or newer is required to build the project, so make sure to download at least  the specified version. Follow these steps inside the project's directory in order to build it using your desired generator:
+CMake 3.15 or newer is required, so make sure to download and install at least the specified version. If you're a Linux user, I highly recommend reading GLFW's compilation guide which goes through the required dependencies and how to build their library for the X11 and/or Wayland backends. Once everything is set, follow these steps inside the project's directory in order to build it using your desired generator:
 
 1. `mkdir build`
 2. `cd build`
-3. `cmake ..` (you can specify the generator using the **-G** flag, check the available ones usign `cmake --help`)
+3. `cmake ..`
 4. `cmake --build .`
